@@ -1,6 +1,6 @@
 development:
-  store: winehub24.myshopify.com
-  password: 55110ed78983a9947f63e6022fc627b9 
+  store: bottleshop24.myshopify.com
+  password: 1dff28c152622d3b870cdee405402173
   theme_id: "live"
   bucket_size: 40
   refill_rate: 2
