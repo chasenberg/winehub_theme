@@ -27,6 +27,7 @@
     </noscript>
 
     <div class="h4 grid-view-item__title">{{ product.title }}</div>
+    <div>{{ product.description | strip_html |  truncatewords: 10 }}</div>
     {% if section.settings.show_vendor %}
       <div class="grid-view-item__vendor">{{ product.vendor }}</div>
     {% endif %}
