@@ -136,6 +136,8 @@
                 <span class="product-price__sale-label product-price__sale-label-{{ section.id }} hide">{{ 'products.product.on_sale' | t }}</span>
               </span>
             {% endif %}
+            {% assign my_float = 75.00 %}
+            <span class="product-price__basicprice" >(€/liter {{ product.price | divided_by: my_float | round: 2 }}) </span>
           </p>
 
           <form action="/cart/add" method="post" enctype="multipart/form-data" class="product-form product-form-{{ section.id }}{% unless section.settings.show_variant_labels %} product-form--hide-variant-labels{% endunless %}" data-section="{{ section.id }}">
