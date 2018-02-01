@@ -3739,7 +3739,7 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
 }
 
 .site-header__icons-wrapper {
-  position: relative;
+  position: fixed;
   margin-right: -10px;
 }
 
@@ -4101,6 +4101,7 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
   position: relative;
   height: 40px;
   border: 1px solid transparent;
+  z-index: 10000;
 }
 
 @include media-query($small) {
@@ -4124,7 +4125,7 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
   top: 0;
   padding: 0 0 0 5px;
   height: 100%;
-  z-index: 1;
+  z-index: 10000;
 }
 
 .search-header__input,
@@ -4135,6 +4136,7 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
   border-color: transparent;
   padding-left: 35px;
   width: 100%;
+  z-index: 10000;
 
   &::-webkit-input-placeholder {
     @include placeholder-text($color-text);
@@ -4155,7 +4157,7 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
 
 .search-bar__input {
   border: 1px solid transparent;
-
+  z-index: 10000;
   &:focus {
     border-color: transparent;
   }
@@ -4174,6 +4176,7 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
 .search-bar {
   border-bottom: 1px solid $color-border;
   padding: 0 ($gutter-site / 2);
+  z-index: 350;
 }
 
 .search-bar__table {
@@ -5835,5 +5838,5 @@ $toolbar-height-small: 46px;
 
 header.site-header {
     position: fixed;
-    z-index: 999999;
+    z-index: 300;
 }
