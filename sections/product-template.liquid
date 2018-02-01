@@ -136,9 +136,13 @@
                 <span class="product-price__sale-label product-price__sale-label-{{ section.id }} hide">{{ 'products.product.on_sale' | t }}</span>
               </span>
             {% endif %}
-            {% assign my_float = 75.00 %}
-            <span class="product-price__basicprice" >(€/liter {{ product.price | divided_by: my_float | round: 2 }}) </span>
-          </p>
+            {% if product.metafields.bundle.bottle_number %}
+            {% assign number_of_bottles = product.metafields.bundle.bottle_number %}
+              <span class="price__basicprice"> ({{ product.price | divided_by: number_of_bottles | divided_by: 75.00 | round: 2 }} €/liter) </span>
+            {% else %}
+              {% assign my_float = 75.00 %}
+              <span class="price__basicprice"> ({{ product.price | divided_by: my_float | round: 2 }} €/liter) </span>
+            {% endif %}
           <p class="product-price__basicprice"> Lieferzeit: 2-3 Werktage<br /> 
           Preis inkl. 19% Mehrwertsteuer zzgl. <a href="https://www.winehub.de/pages/zahlung-und-versand">Versandpauschale</a> von 4,90€</p>
 
