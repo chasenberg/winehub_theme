@@ -139,6 +139,9 @@
             {% assign my_float = 75.00 %}
             <span class="product-price__basicprice" >(€/liter {{ product.price | divided_by: my_float | round: 2 }}) </span>
           </p>
+          <p class="product-price__basicprice"> Lieferzeit: 2-3 Werktage<br /> 
+          Preis inkl. 19% Mehrwertsteuer zzgl. <a href="https://www.winehub.de/pages/zahlung-und-versand">Versandpauschale</a> von 4,90€</p>
+
 
           <form action="/cart/add" method="post" enctype="multipart/form-data" class="product-form product-form-{{ section.id }}{% unless section.settings.show_variant_labels %} product-form--hide-variant-labels{% endunless %}" data-section="{{ section.id }}">
             {% unless product.options.size == 1 and product.variants[0].title == 'Default Title' %}
