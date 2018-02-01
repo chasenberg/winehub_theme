@@ -161,6 +161,7 @@
           {% unless social_icons and section.settings.footer_newsletter_enable and section.settings.show_payment_icons %}
             <small class="site-footer__copyright-content">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: '/' }}</small>
             <small class="site-footer__copyright-content site-footer__copyright-content--powered-by">{{ powered_by_link }}</small>
+            <p> * Alle Preise inkl. Mehrwertsteuer von 19%  </p>
           {% endunless %}
           {% if section.settings.show_payment_icons %}
             <div class="site-footer__payment-icons{% unless social_icons or section.settings.footer_newsletter_enable == blank %} site-footer__payment-icons--right{% endunless %}">
@@ -188,7 +189,7 @@
         <small class="site-footer__copyright-content">{{ powered_by_link }}</small>
       </div>
     {% endif %}
-        <p> * Alle Preise inkl. Mehrwertsteuer von 19%  </p>
+        
     <div class="site-footer__copyright"> <p>Wir liefern auschließlich mit: </p>
 
     <svg  version="1.0" id="Ebene_1" xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" width="175.748" height="38.786"
